@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_resultado">
+        <b id="b_jogador1">Pontos Jogador:0</b> <br>
+        <b id="b_jogador2">Pontos Adversário:0</b>
+    </div> <br>
+    <button onclick="simular()">Simular Batalha</button>
+    <div id="div_baralho"></div>
+    <div id="div_baralhoTotal"></div>
+</body>  
+</html> 
+<script>
+    var jogador1 = 0
+    var jogador2 = 0
+    function simular(){
+       var sorteio1 = parseInt(1 + Math.random() * 10)
+       var sorteio2 = parseInt(1 + Math.random() * 10)
+        
+
+       if(sorteio1 == 1 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 1 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/capitao_america.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 2 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/deadpool.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 3 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/homem_de_ferro.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 4 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mercurio.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 5 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if (sorteio1 == 5 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/mulher_invisivel.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 6 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/sr_fantastico.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%">`
+       } else if(sorteio1 == 7 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 7 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/thor.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 2){
+        div_baralho.innerHTML `${jogador1++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 8 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/venom.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 Venceu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 9 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/viuva_negra.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 1){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/capitao_america.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 2){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/deadpool.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 3){
+        div_baralho.innerHTML = `${jogador1++}${jogador2++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/homem_de_ferro.png" alt="" width="20%"><br><span style="color: blue;">Houve um empate</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 4){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/mercurio.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 5){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/mulher_invisivel.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 6){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/sr_fantastico.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 7){
+        div_baralho.innerHTML = `${jogador2++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/thor.png" alt="" width="20%"><br><span style="color: red;">O jogador perdeu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 8){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/venom.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 9){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/viuva_negra.png" alt="" width="20%"><br><span style="color: green;">O jogador1 venceu</span>`
+       } else if(sorteio1 == 10 && sorteio2 == 10){
+        div_baralho.innerHTML = `${jogador1++}<img src="./cartas/wolverine.png" alt="" width="20%"> VS. <img src="./cartas/wolverine.png" alt="" width="20%">`
+       }
+
+       b_jogador1.innerHTML = `Pontos Jogador:${jogador1}`
+       b_jogador2.innerHTML = `Pontos Adversário:${jogador2}`
+       
+       if(sorteio1 == 1 || sorteio2 == 2){
+        div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/homem_de_ferro.png" alt="" width="10%"><img src="./cartas/mercurio.png" alt="" width="10%"><img src="./cartas/mulher_invisivel.png" alt="" width="10%"><img src="./cartas/sr_fantastico.png" alt="" width="10%"><img src="./cartas/thor.png" alt="" width="10%"><img src="./cartas/venom.png" alt="" width="10%"><img src="./cartas/viuva_negra.png" alt="" width="10%"><img src="./cartas/wolverine.png" alt="" width="10%">`
+       } else if(sorteio1 == 3 || sorteio2 == 4){
+        div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/capitao_america.png" alt="" width="10%"><img src="./cartas/deadpool.png" alt="" width="10%"><img src="./cartas/mulher_invisivel.png" alt="" width="10%"><img src="./cartas/sr_fantastico.png" alt="" width="10%"><img src="./cartas/thor.png" alt="" width="10%"><img src="./cartas/venom.png" alt="" width="10%"><img src="./cartas/viuva_negra.png" alt="" width="10%"><img src="./cartas/wolverine.png" alt="" width="10%">`
+       } else if(sorteio1 == 5 || sorteio2 == 6){
+        div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/capitao_america.png" alt="" width="10%"><img src="./cartas/deadpool.png" alt="" width="10%"><img src="./cartas/homem_de_ferro.png" alt="" width="10%"><img src="./cartas/mercurio.png" alt="" width="10%"><img src="./cartas/thor.png" alt="" width="10%"><img src="./cartas/venom.png" alt="" width="10%"><img src="./cartas/viuva_negra.png" alt="" width="10%"><img src="./cartas/wolverine.png" alt="" width="10%">`
+       } else if(sorteio1 == 7 || sorteio2 == 8){
+        div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/capitao_america.png" alt="" width="10%"><img src="./cartas/deadpool.png" alt="" width="10%"><img src="./cartas/homem_de_ferro.png" alt="" width="10%"><img src="./cartas/mercurio.png" alt="" width="10%"><img src="./cartas/mulher_invisivel.png" alt="" width="10%"><img src="./cartas/sr_fantastico.png" alt="" width="10%"><img src="./cartas/viuva_negra.png" alt="" width="10%"><img src="./cartas/wolverine.png" alt="" width="10%">`
+       } else if(sorteio1 == 9 || sorteio2 == 10){
+        div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/capitao_america.png" alt="" width="10%"><img src="./cartas/deadpool.png" alt="" width="10%"><img src="./cartas/homem_de_ferro.png" alt="" width="10%"><img src="./cartas/mercurio.png" alt="" width="10%"><img src="./cartas/mulher_invisivel.png" alt="" width="10%"><img src="./cartas/sr_fantastico.png" alt="" width="10%"><img src="./cartas/thor.png" alt="" width="10%"><img src="./cartas/venom.png" alt="" width="10%">`
+       }
+    }
+    div_baralhoTotal.innerHTML = `<h2>Baralho restante:</h2><img src="./cartas/capitao_america.png" alt="" width="10%"><img src="./cartas/deadpool.png" alt="" width="10%"><img src="./cartas/homem_de_ferro.png" alt="" width="10%"><img src="./cartas/mercurio.png" alt="" width="10%"><img src="./cartas/mulher_invisivel.png" alt="" width="10%"><img src="./cartas/sr_fantastico.png" alt="" width="10%"><img src="./cartas/thor.png" alt="" width="10%"><img src="./cartas/venom.png" alt="" width="10%"><img src="./cartas/viuva_negra.png" alt="" width="10%"><img src="./cartas/wolverine.png" alt="" width="10%">`
+    
+</script>
